@@ -29,7 +29,8 @@ const ContactForm = () => {
     }
     setLoading(true);
     try {
-      await sendToWebhook({ ...parsed.data, lang, submittedAt: new Date().toISOString() });
+      const { name, email, service, message } = parsed.data;
+      await sendToWebhook({ name, email, service, message, lang, submittedAt: new Date().toISOString() });
       toast({ title: t.contact.success });
       setForm({ name: "", email: "", service: "", message: "" });
     } catch {
