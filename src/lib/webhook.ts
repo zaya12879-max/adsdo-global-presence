@@ -1,8 +1,11 @@
 /**
- * Placeholder for n8n webhook integration.
- * Replace N8N_WEBHOOK_URL with your actual n8n webhook URL when ready.
+ * Form submission endpoints.
+ * - N8N_WEBHOOK_URL: paste your n8n webhook URL when ready.
+ * - FORMSPREE_ENDPOINT: paste your Formspree form endpoint (e.g. https://formspree.io/f/xxxxxx)
+ *   The form will POST to whichever is configured (n8n takes priority).
  */
 export const N8N_WEBHOOK_URL = ""; // TODO: paste your n8n webhook URL here
+export const FORMSPREE_ENDPOINT = ""; // TODO: paste your Formspree endpoint here
 
 export type ContactPayload = {
   name: string;
@@ -14,15 +17,17 @@ export type ContactPayload = {
 };
 
 export async function sendToWebhook(payload: ContactPayload): Promise<void> {
-  if (!N8N_WEBHOOK_URL) {
-    // No webhook configured yet — log for development.
-    console.info("[ADSDO] n8n webhook not configured. Payload:", payload);
+  const endpoint = N8N_WEBHOOK_URL || FORMSPREE_ENDPOINT;
+  if (!endpoint) {
+    // No endpoint configured yet — simulate success for development.
+    console.info("[ADSDO] No submission endpoint configured. Payload:", payload);
+    await new Promise((r) => setTimeout(r, 600));
     return;
   }
-  const res = await fetch(N8N_WEBHOOK_URL, {
+  const res = await fetch(endpoint, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", Accept: "application/json" },
     body: JSON.stringify(payload),
   });
-  if (!res.ok) throw new Error(`Webhook failed: ${res.status}`);
+  if (!res.ok) throw new Error(`Submission failed: ${res.status}`);
 }
