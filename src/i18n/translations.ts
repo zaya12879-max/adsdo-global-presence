@@ -1,0 +1,76 @@
+export type Lang = "en" | "fr";
+
+export const translations = {
+  en: {
+    nav: { about: "About", services: "Services", contact: "Contact" },
+    hero: {
+      eyebrow: "Premium Digital Marketing Agency",
+      title: "Elevate your brand with strategy, design & data.",
+      body: "Hi there 👋. I'm the founder of ADSDO Agency, I am a Meta and Google-certified Marketing analyst with nine years of experience in Digital Marketing. I think the caliber of your business should be reflected in the quality of your website, content, and AD campaigns.",
+      cta: "Start your project",
+      ctaAlt: "Explore services",
+    },
+    services: {
+      title: "Services crafted for ambitious brands",
+      subtitle: "End-to-end digital expertise to grow visibility, engagement and revenue.",
+      items: [
+        { title: "Web Development", desc: "High-performance, conversion-focused websites built with modern stacks." },
+        { title: "Digital Marketing", desc: "Data-driven strategies across every channel that matters to your audience." },
+        { title: "Advertising", desc: "Meta & Google Ads campaigns engineered to maximize ROAS." },
+        { title: "Content Strategy", desc: "Editorial frameworks and storytelling that build trust and authority." },
+        { title: "SEO", desc: "Technical and content SEO to capture qualified, intent-driven traffic." },
+        { title: "Lead Generation", desc: "Funnels, landing pages and automation that fill your pipeline." },
+      ],
+    },
+    contact: {
+      title: "Let's build something exceptional",
+      subtitle: "Tell us about your project — we typically respond within one business day.",
+      name: "Full name",
+      email: "Email address",
+      service: "Service of interest",
+      selectService: "Select a service",
+      message: "Your message",
+      submit: "Send message",
+      sending: "Sending...",
+      success: "Thank you — your message has been received.",
+      error: "Something went wrong. Please try again.",
+    },
+    footer: "© 2026 ADSDO Agency. All rights reserved.",
+  },
+  fr: {
+    nav: { about: "À propos", services: "Services", contact: "Contact" },
+    hero: {
+      eyebrow: "Agence de Marketing Digital Premium",
+      title: "Sublimez votre marque par la stratégie, le design et la donnée.",
+      body: "Bonjour 👋. Je suis la fondatrice d'ADSDO Agency, analyste marketing certifiée Meta et Google avec neuf ans d'expérience en marketing digital. Je crois que l'excellence de votre entreprise doit se refléter dans la qualité de votre site web, de votre contenu et de vos campagnes publicitaires.",
+      cta: "Démarrer votre projet",
+      ctaAlt: "Voir les services",
+    },
+    services: {
+      title: "Des services pensés pour les marques ambitieuses",
+      subtitle: "Une expertise digitale complète pour accroître visibilité, engagement et revenus.",
+      items: [
+        { title: "Développement Web", desc: "Sites haute performance, orientés conversion, conçus avec des technologies modernes." },
+        { title: "Marketing Digital", desc: "Des stratégies pilotées par la donnée sur tous les canaux qui comptent." },
+        { title: "Publicité", desc: "Campagnes Meta & Google Ads optimisées pour maximiser le ROAS." },
+        { title: "Stratégie de Contenu", desc: "Lignes éditoriales et storytelling qui construisent confiance et autorité." },
+        { title: "Optimisation SEO", desc: "SEO technique et éditorial pour capter un trafic qualifié et intentionnel." },
+        { title: "Génération de Leads", desc: "Tunnels, landing pages et automatisations qui remplissent votre pipeline." },
+      ],
+    },
+    contact: {
+      title: "Construisons ensemble quelque chose d'exceptionnel",
+      subtitle: "Parlez-nous de votre projet — nous répondons généralement sous un jour ouvré.",
+      name: "Nom complet",
+      email: "Adresse e-mail",
+      service: "Service souhaité",
+      selectService: "Choisissez un service",
+      message: "Votre message",
+      submit: "Envoyer le message",
+      sending: "Envoi...",
+      success: "Merci — votre message a bien été reçu.",
+      error: "Une erreur est survenue. Veuillez réessayer.",
+    },
+    footer: "© 2026 ADSDO Agency. Tous droits réservés.",
+  },
+} as const;
