@@ -22,6 +22,12 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          glow: "hsl(var(--primary-glow))",
+        },
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          foreground: "hsl(var(--gold-foreground))",
+          soft: "hsl(var(--gold-soft))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -57,6 +63,18 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-gold": "var(--gradient-gold)",
+      },
+      boxShadow: {
+        luxury: "var(--shadow-luxury)",
+        gold: "var(--shadow-gold)",
+      },
+      fontFamily: {
+        display: ["'Playfair Display'", "serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
