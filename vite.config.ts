@@ -3,10 +3,9 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // Had l-line houwa l-muhim:
-  base: "/adsdo-global-presence/", 
+  // Hada houwa l-hll: kiy-chouf wax ntina f GitHub (production) aw Lovable
+  base: mode === 'production' ? "/adsdo-global-presence/" : "/",
   server: {
     host: "::",
     port: 8080,
@@ -30,5 +29,7 @@ export default defineConfig(({ mode }) => ({
       "@tanstack/react-query",
       "@tanstack/query-core"
     ],
+  },
+}));
   },
 }));
