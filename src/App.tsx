@@ -13,7 +13,11 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      {/* 
+          HNA FIN ZDNA BASENAME: 
+          Kiy-detecti automatique wax ana f GitHub (production) aw Lovable 
+      */}
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
@@ -23,5 +27,7 @@ const App = () => (
     </TooltipProvider>
   </QueryClientProvider>
 );
+
+export default App;
 
 export default App;
